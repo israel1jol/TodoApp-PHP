@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to left, rgb(9, 42, 133),rgba(8, 29, 126, 0.74), rgba(7, 50, 131, 0.61));
+}
+
+.custom-jumbotron{
+    border-radius:0;
+    background: linear-gradient(to left, rgba(20, 68, 197, 0.466),rgba(47, 75, 201, 0.705), rgba(47, 100, 199, 0.747));
+}
+
+.contain{
+    background-color: rgba(245, 245, 245, 0.164);
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+.custom-modal{
+    padding: 20px;
+    width:40%;
+    margin:auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: solid 1px rgb(236, 235, 235);
+    box-shadow:black 1px 2px 2px;
+}
+
+#custom-modal-form{
+    line-height: 5rem;
+}
+
+.animated-modal{
+    height: 100vh;
+    z-index: 10000000;
+    background-color: rgba(255, 255, 255, 0.452);
+    display: flex;
+    align-items: center;
+    top:0;
+    left:0;
+    position: absolute;
+    width: 100%;
+    animation-name: modal-pop-in;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+.cancel-btn{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: rgba(180, 16, 4, 0.877);
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.7s ease-out;
+}
+
+.cancel-btn:hover{
+    background-color: rgba(219, 19, 19, 0.897);
+    border-radius: 50%;
+}
+
+.deanimated-modal{
+    height: 100vh;
+    z-index: 10000000;
+    background-color: rgba(255, 255, 255, 0.452);
+    display: flex;
+    align-items: center;
+    top:0;
+    left:0;
+    position: absolute;
+    width: 100%;
+    animation-name: modal-pop-out;
+    animation-iteration-count: 1;
+    animation-duration: 2.2s;
+    animation-timing-function: ease;
+}
+
+@keyframes modal-pop-in{
+    0%{
+        margin-top:-100vh;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+@keyframes modal-pop-out{
+    0%{
+        margin-top:0vh;
+    }
+    100%{
+        margin-top: -100vh;
+    }
+}
